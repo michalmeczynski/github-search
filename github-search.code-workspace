@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "extensions": {
+    "recommendations": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+  },
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always"
+    },
+    "eslint.format.enable": true,
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "on"
+    }
+  }
+}
