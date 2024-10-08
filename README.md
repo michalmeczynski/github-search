@@ -15,6 +15,8 @@ To manage some external dependency we should follow the given way. Every operati
 To start the development server run `npm run dev:{appName}`. Open your browser and navigate to `http://localhost:{appPort}/`.
 To run all applications: `npm run dev`.
 
+To run `proxy` app there is `.env` needed with key GITHUB_API_TOKEN.
+
 ### Build
 
 To create a production bundle run `npm run build:{appName}` or `npm run build` to build all.
