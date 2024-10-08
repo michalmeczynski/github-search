@@ -6,7 +6,6 @@
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
-      "!{projectRoot}/eslint.config.js",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/jest.config.[jt]s",
@@ -37,22 +36,28 @@
       }
     }
   ],
-  "defaultProject": "github-search",
   "generators": {
     "@nx/react": {
       "application": {
         "babel": true,
-        "style": "styled-components",
+        "style": "@emotion/styled",
         "linter": "eslint",
         "bundler": "webpack"
       },
       "component": {
-        "style": "styled-components"
+        "style": "@emotion/styled"
       },
       "library": {
-        "style": "styled-components",
+        "style": "@emotion/styled",
         "linter": "eslint"
       }
+    }
+  },
+  "targetDefaults": {
+    "@nx/esbuild:esbuild": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   }
 }
